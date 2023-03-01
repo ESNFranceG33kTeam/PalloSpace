@@ -1,4 +1,6 @@
 # ignore node dependency directories
+wp-content/index.php
+
 node_modules/
 
 # ignore log files and databases

@@ -4,6 +4,19 @@
  * @package WordPress
  */
 
+/** SSL conf. Uncomment on production !
+*define('FORCE_SSL_ADMIN', true);
+*
+*if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+*	$_SERVER['HTTPS'] = 'on';
+*  $_SERVER['SERVER_PORT'] = 443;
+*}
+*
+*if (!empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+*	$_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
+*}
+*/
+
 /** Nom de la base de données de WordPress. */
 define( 'DB_NAME', 'pallospace' );
 
@@ -53,7 +66,7 @@ define( 'NONCE_SALT',       'mettez une phrase unique ici' );
  * si vous leur donnez chacune un préfixe unique.
  * N’utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés !
  */
-$table_prefix = 'wpps_';
+$table_prefix = 'wp_';
 
 /* Theme par default. */
 define( 'WP_DEFAULT_THEME', 'twentytwentytwo' );
