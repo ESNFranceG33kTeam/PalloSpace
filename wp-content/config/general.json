@@ -1,0 +1,15 @@
+{
+    "active_plugins": "a:2:{i:0;s:25:\"authorizer\/authorizer.php\";i:2;s:17:\"wp-cfm\/wp-cfm.php\";}",
+    "admin_email": "wpa@esnfrance.org",
+    "admin_email_lifespan": "1693683900",
+    "blogdescription": "",
+    "blogname": "PalloSpace",
+    "date_format": "j F Y",
+    "default_role": "subscriber",
+    "start_of_week": "1",
+    "time_format": "G\\hi",
+    "timezone_string": "Europe\/Paris",
+    "users_can_register": "0",
+    "wpcfm_settings": "{\"bundles\":[{\"label\":\"Auth\",\"name\":\"auth\",\"config\":[\"auth_settings\",\"auth_settings_access_users_blocked\",\"auth_settings_advanced_public_notice\",\"auth_version\"]},{\"label\":\"General\",\"name\":\"general\",\"config\":[\"active_plugins\",\"admin_email\",\"admin_email_lifespan\",\"blogdescription\",\"blogname\",\"date_format\",\"default_role\",\"start_of_week\",\"time_format\",\"timezone_string\",\"users_can_register\",\"wpcfm_settings\"]},{\"label\":\"Media\",\"name\":\"media\",\"config\":[\"large_size_h\",\"large_size_w\",\"medium_large_size_h\",\"medium_large_size_w\",\"medium_size_h\",\"medium_size_w\",\"thumbnail_crop\",\"thumbnail_size_h\",\"thumbnail_size_w\",\"uploads_use_yearmonth_folders\"]},{\"label\":\"Permalinks\",\"name\":\"permalinks\",\"config\":[\"category_base\",\"permalink_structure\",\"tag_base\"]},{\"label\":\"Reading\",\"name\":\"reading\",\"config\":[\"blog_public\",\"page_for_posts\",\"page_on_front\",\"posts_per_page\",\"posts_per_rss\",\"rss_use_excerpt\",\"show_on_front\"]},{\"label\":\"Theme\",\"name\":\"theme\",\"config\":[]},{\"label\":\"Writing\",\"name\":\"writing\",\"config\":[\"default_category\",\"default_email_category\",\"default_post_format\",\"mailserver_login\",\"mailserver_pass\",\"mailserver_port\",\"mailserver_url\",\"ping_sites\"]}]}",
+    ".label": "General"
+}

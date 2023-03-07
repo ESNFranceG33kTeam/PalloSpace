@@ -1,0 +1,11 @@
+{
+    "default_category": "1",
+    "default_email_category": "1",
+    "default_post_format": "0",
+    "mailserver_login": "login@example.com",
+    "mailserver_pass": "password",
+    "mailserver_port": "110",
+    "mailserver_url": "mail.example.com",
+    "ping_sites": "http:\/\/rpc.pingomatic.com\/",
+    ".label": "Writing"
+}

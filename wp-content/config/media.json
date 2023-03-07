@@ -1,0 +1,13 @@
+{
+    "large_size_h": "1024",
+    "large_size_w": "1024",
+    "medium_large_size_h": "0",
+    "medium_large_size_w": "768",
+    "medium_size_h": "300",
+    "medium_size_w": "300",
+    "thumbnail_crop": "1",
+    "thumbnail_size_h": "150",
+    "thumbnail_size_w": "150",
+    "uploads_use_yearmonth_folders": "1",
+    ".label": "Media"
+}
