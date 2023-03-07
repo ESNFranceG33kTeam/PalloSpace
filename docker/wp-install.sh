@@ -33,9 +33,12 @@ echo "================================================================="
 echo "Install plugins & theme"
 echo "================================================================="
 echo "Installing Plugins & Theme ....."
-wp plugin install wp-cfm --activate
-wp plugin install authorizer --activate
-wp theme install twentytwentytwo --activate
+IFS=' ' read -r -a plugins <<< "${WORDPRESS_PLUGINS_TO_INSTALL}"
+for plugin in "${plugins[@]}"; do
+    wp plugin install "${plugin}" --activate
+done
+# Wait for the esn theme
+wp theme install "${WORDPRESS_THEME_TO_INSTALL}" --activate
 
 # Pull config from config/ folder
 echo "================================================================="

@@ -39,7 +39,9 @@ docker run -d --name pallospace \
 
 Now you can open your browser into `http://localhost:8080`
 
-## Version control
+## Contributing
+
+### Version control
 
 The configuration, block, and other structural modification about your website are store in the db. In order to version control them and to install them automatically at startup we need to track them.
 To do that, we use the plugin [WP-CFM](https://fr.wordpress.org/plugins/wp-cfm/), it allow to register the db modification as `json` files in [html/wp-content/config/](html/wp-content/config/).
@@ -49,3 +51,11 @@ To track your modifications go to [this page](http://127.0.0.1:8080/wp-admin/opt
 - Click `Diff` to see your modifications
 - Click `Pull` if you want to update the db
 - Click `Push` if you want to update the `json` files
+
+### What to git
+
+With the actual method of installation and to keep track of changes, the only stuff from the folder `html` we today need to git are :
+- folder of the `html/wp-content/themes/esn` (as they are not auto install at this point)
+- folder `html/wp-content/config`
+- folder `html/wp/content/mu-plugins`
+Every plugins have to be add into the [variable file](.envrc) in order to be installed automatically.
