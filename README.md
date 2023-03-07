@@ -13,8 +13,13 @@ To setup your installation automatically, you can launch the script [`./setup.sh
 
 #### Build
 
-```docker build . -f docker/Dockerfile.wordpress --tag pallospace:latest```
-```docker build . -f docker/Dockerfile.cli --tag wpcli:latest```
+```
+docker build . -f docker/Dockerfile.wordpress --tag pallospace:latest
+```
+
+```
+docker build . -f docker/Dockerfile.cli --tag wpcli:latest
+```
 
 #### Init
 
@@ -58,4 +63,4 @@ With the actual method of installation and to keep track of changes, the only st
 - folder of the `html/wp-content/themes/esn` (as they are not auto install at this point)
 - folder `html/wp-content/config`
 - folder `html/wp/content/mu-plugins`
-Every plugins have to be add into the [variable file](.envrc) in order to be installed automatically.
+Every plugins have to be add into the [variables file](.envrc) in order to be installed automatically.
