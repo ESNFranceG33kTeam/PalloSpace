@@ -69,7 +69,7 @@ define( 'NONCE_SALT',       'mettez une phrase unique ici' );
 $table_prefix = 'wp_';
 
 /* Theme par default. */
-define( 'WP_DEFAULT_THEME', 'twentytwentytwo' );
+//define( 'WP_DEFAULT_THEME', 'twentytwentytwo' );
 
 /**
  * Pour les développeurs : le mode déboguage de WordPress.

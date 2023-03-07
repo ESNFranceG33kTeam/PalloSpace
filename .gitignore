@@ -1,20 +1,21 @@
-# ignore node dependency directories
-!wp-content/
+!html/
+html/*
+!html/wp-content/
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/config/
-!wp-content/mu-plugins/
-#!wp-content/plugins/
-#!wp-content/themes/
+html/wp-content/*
+!html/wp-content/config/
+!html/wp-content/mu-plugins/
+#!html/wp-content/plugins/
+#!html/wp-content/themes/
 
 # ignore these plugins
-wp-content/plugins/hello.php
-wp-content/plugins/akismet/
+html/wp-content/plugins/hello.php
+html/wp-content/plugins/akismet/
 
 # ignore specific themes
-wp-content/themes/twenty*/
+html/wp-content/themes/twenty*/
 
 node_modules/
 

@@ -9,8 +9,24 @@ echo "================================================================="
 echo "Download and configure Wordpress"
 echo "================================================================="
 wp core download --locale=fr_FR
-wp core config --dbhost="${DB_HOST}" --dbname="${DB_NAME}" --dbuser="${DB_USER}" --dbpass="${DB_PASSWORD}"
-wp core install --title="${PROJECT_NAME}" --admin_user="wpa" --admin_password="${ADMIN_PS}" --admin_email="wpa@ixesn.fr" --url="${URL_PS}"
+wp core config --skip-check \
+        --dbhost="${WORDPRESS_DB_HOST}" \
+        --dbname="${WORDPRESS_DB_NAME}" \
+        --dbuser="${WORDPRESS_DB_USER}" \
+        --dbpass="${WORDPRESS_DB_PASSWORD}" \
+        --extra-php <<PHP
+define('FORCE_SSL_ADMIN', ${FORCE_SSL_ADMIN});
+if (!empty(\$_SERVER['HTTP_X_FORWARDED_PROTO']) && \$_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+    \$_SERVER['HTTPS'] = 'on';
+    \$_SERVER['SERVER_PORT'] = 443;
+}
+if (!empty(\$_SERVER['HTTP_X_FORWARDED_HOST'])) {
+    \$_SERVER['HTTP_HOST'] = \$_SERVER['HTTP_X_FORWARDED_HOST'];
+}
+PHP
+
+
+wp core install --title="${PROJECT_NAME}" --admin_user="${WORDPRESS_ADMIN_USER}" --admin_password="${WORDPRESS_ADMIN_PASSWORD}" --admin_email="${WORDPRESS_ADMIN_EMAIL}" --url="${URL_PS}"
 
 # Install plugins & theme
 echo "================================================================="

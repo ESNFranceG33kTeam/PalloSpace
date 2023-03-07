@@ -1,7 +1,6 @@
 FROM wordpress:latest
 
 ARG PROJECT_NAME=PalloSpace
-ARG ADMIN_PS
 
 LABEL org.opencontainers.image.title="${PROJECT_NAME}}" \
       org.opencontainers.image.authors=${GITHUB_ACTOR} \
@@ -13,8 +12,6 @@ LABEL org.opencontainers.image.title="${PROJECT_NAME}}" \
       org.opencontainers.image.os="alpine" \
       org.opencontainers.image.version=${GITHUB_REF}
 
-# Bind custom conf and custom themes/plugins
-VOLUME /var/www/html/wp-config.php
-VOLUME /var/www/html/wp-content
+VOLUME /var/www/html
 
 EXPOSE 80
